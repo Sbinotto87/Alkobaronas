@@ -157,7 +157,6 @@ img {
 .navbar-nav .nav-link:hover {
   color: var(--primary) !important;
 }
-/* FIX 1 â€” Search btn in navbar */
 #navSearchBtn {
   background: none;
   border: none;
@@ -356,7 +355,6 @@ section {
   max-width: 470px;
   margin-bottom: 30px;
 }
-/* FIX 2 â€” Video play button */
 .btn-play {
   display: inline-flex;
   align-items: center;
@@ -687,7 +685,6 @@ section {
 #menu {
   background: var(--light);
 }
-/* FIX 3 â€” Filter buttons */
 .filtbtn {
   border: 2px solid #e5e5e5;
   background: #fff;
@@ -759,7 +756,6 @@ section {
   background: var(--secondary);
   color: var(--dark);
 }
-/* FIX 4 â€” Heart & Plus buttons stop propagation */
 .mhrt {
   position: absolute;
   top: 13px;
@@ -825,7 +821,6 @@ section {
   font-size: 0.73rem;
   color: var(--secondary);
 }
-/* FIX 4 â€” Plus button opens detail popup */
 .madd {
   width: 36px;
   height: 36px;
@@ -1045,7 +1040,7 @@ section {
   margin-right: 5px;
 }
 
-/* ===================== HISTORY â€” FIX 8 ===================== */
+/* ===================== HISTORY ===================== */
 #history {
   background: var(--cream);
 }
@@ -1063,7 +1058,6 @@ section {
   top: 0;
   bottom: 0;
 }
-/* Grid: left-col | dot-col | right-col */
 .tli {
   display: grid;
   grid-template-columns: 1fr 36px 1fr;
@@ -1083,11 +1077,9 @@ section {
   padding-left: 32px;
   text-align: left;
 }
-/* ODD â†’ show LEFT text, hide RIGHT */
 .tli:nth-child(odd) .tl-right {
   visibility: hidden;
 }
-/* EVEN â†’ hide LEFT, show RIGHT */
 .tli:nth-child(even) .tl-left {
   visibility: hidden;
 }
@@ -1382,7 +1374,7 @@ section {
   color: #aaa;
 }
 
-/* ===================== RESERVATION â€” FIX 5 ===================== */
+/* ===================== RESERVATION ===================== */
 #reservation {
   background: var(--light);
 }
@@ -1422,10 +1414,13 @@ section {
   border-color: var(--primary);
 }
 .fcard {
-  background: #fff;
-  border-radius: 18px;
-  padding: 32px;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+    background: #fff;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+    max-width: 650px; /* Limits how wide the registration form can stretch */
+    width: 100%; /* Ensures responsiveness on smaller screens */
+    margin: 0 auto; /* Centers it horizontally */
 }
 .sucmsg {
   display: none;
@@ -1571,7 +1566,6 @@ section {
   color: #fff;
   font-size: 2.1rem;
 }
-/* Newsletter form â€” fixed layout */
 .nl-form-wrap {
   display: flex;
   gap: 10px;
@@ -1623,7 +1617,7 @@ section {
   }
 }
 
-/* ===================== CONTACT â€” FIX 6 ===================== */
+/* ===================== CONTACT ===================== */
 #contact-section {
   background: #fff;
 }
@@ -1882,8 +1876,6 @@ footer {
 /* ====================================================
    ALL POPUP / MODAL STYLES
 ==================================================== */
-
-/* --- FIX 1: SEARCH POPUP --- */
 #searchOv {
   display: none;
   position: fixed;
@@ -2030,7 +2022,6 @@ footer {
   color: var(--dark);
 }
 
-/* --- FIX 4: MENU DETAIL POPUP --- */
 #menuPop {
   display: none;
   position: fixed;
@@ -2231,7 +2222,6 @@ footer {
   box-shadow: 0 10px 28px rgba(232, 40, 26, 0.38);
 }
 
-/* --- FIX 7: GALLERY POPUP --- */
 #galPop {
   display: none;
   position: fixed;
@@ -2313,7 +2303,6 @@ footer {
   border-color: var(--primary);
 }
 
-/* Magnific video override */
 .mfp-bg {
   background: #000 !important;
   opacity: 0.93 !important;
@@ -2355,7 +2344,6 @@ footer {
   .mpbox .mpbody {
     padding: 22px 18px;
   }
-  /* Timeline mobile: collapse to single column */
   .timeline::before {
     left: 16px;
   }
@@ -2391,7 +2379,6 @@ footer {
     width: 260px;
     height: 260px;
   }
-  /* Hide only hero floating cards, NOT form cards */
   .fcard.fc1,
   .fcard.fc2,
   .fcard.fc3 {

@@ -1,0 +1,94 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Shopping Cart";
+}
+
+<div class="row w-100 justify-content-center m-0 py-5">
+    <div class="col-md-8 col-lg-7">
+        <div class="card p-4 p-md-5 shadow-lg" style="background-color: #1e1e1e; border: 1px solid #333; border-radius: 12px;">
+
+            <!-- Header -->
+            <div class="text-center mb-4">
+                <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Shopping <span style="color: #ffc107;">Cart</span></h2>
+                <p class="text-muted" style="font-size: 0.9rem;">Review your selected bottles before placing your delivery order</p>
+            </div>
+
+            <!-- Selected Items List -->
+            <div class="mb-4">
+                <h5 class="text-light mb-3" style="font-family: 'Playfair Display', serif;">Selected Items</h5>
+
+                <!-- Item 1 -->
+                <div class="p-3 mb-3 rounded d-flex align-items-center justify-content-between flex-wrap gap-3" style="background-color: #262626; border: 1px solid #333;">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="~/img/menu/wine1.jpg" alt="Reserve Cabernet Sauvignon" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;" />
+                        <div>
+                            <h6 class="text-light mb-0" style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 0.95rem;">Reserve Cabernet Sauvignon</h6>
+                            <small class="text-muted">750ml • Red Wine</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="d-inline-flex align-items-center gap-2">
+                            <button type="button" class="btn btn-outline-secondary btn-sm" style="width: 26px; height: 26px; padding: 0; line-height: 1; color: #fff;">-</button>
+                            <span class="text-light" style="font-weight: 600; font-size: 0.9rem; min-width: 20px; text-align: center;">1</span>
+                            <button type="button" class="btn btn-outline-secondary btn-sm" style="width: 26px; height: 26px; padding: 0; line-height: 1; color: #fff;">+</button>
+                        </div>
+                        <span style="font-weight: 700; color: #ffc107; font-family: 'Playfair Display', serif; font-size: 1rem;">$24.99</span>
+                        <button type="button" class="btn btn-link text-danger p-0" title="Remove item"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="p-3 mb-3 rounded d-flex align-items-center justify-content-between flex-wrap gap-3" style="background-color: #262626; border: 1px solid #333;">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="~/img/menu/beer1.jpg" alt="Hazy IPA Craft Brew" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;" />
+                        <div>
+                            <h6 class="text-light mb-0" style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 0.95rem;">Hazy IPA Craft Brew</h6>
+                            <small class="text-muted">4-pack • Beer</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="d-inline-flex align-items-center gap-2">
+                            <button type="button" class="btn btn-outline-secondary btn-sm" style="width: 26px; height: 26px; padding: 0; line-height: 1; color: #fff;">-</button>
+                            <span class="text-light" style="font-weight: 600; font-size: 0.9rem; min-width: 20px; text-align: center;">2</span>
+                            <button type="button" class="btn btn-outline-secondary btn-sm" style="width: 26px; height: 26px; padding: 0; line-height: 1; color: #fff;">+</button>
+                        </div>
+                        <span style="font-weight: 700; color: #ffc107; font-family: 'Playfair Display', serif; font-size: 1rem;">$29.98</span>
+                        <button type="button" class="btn btn-link text-danger p-0" title="Remove item"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Box -->
+            <div class="p-3 mb-4 rounded" style="background-color: #262626; border: 1px solid #333;">
+                <div class="d-flex justify-content-between mb-2" style="font-size: 0.9rem;">
+                    <span class="text-light">Subtotal</span>
+                    <span class="text-light" style="font-weight: 600;">$54.97</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2" style="font-size: 0.9rem;">
+                    <span class="text-light">Fast Delivery (Mažeikių eifelio bokštas)</span>
+                    <span style="font-weight: 600; color: #198754;">FREE</span>
+                </div>
+                <hr style="border-color: #333;" />
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-light" style="font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.15rem;">Total Amount</span>
+                    <span style="font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.4rem; color: #ffc107;">$54.97</span>
+                </div>
+            </div>
+
+            <!-- Checkout Button -->
+            <div class="d-grid mb-3">
+                <button type="button" class="btn btn-warning py-3" style="font-weight: 600; color: #121212;" onclick="alert('Prototype order submitted successfully!');">
+                    <i class="fas fa-check-circle me-1"></i> Proceed to Checkout / Order Now
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="text-center mt-4">
+                <a href="@Url.Action("Index", "Home")" style="font-size: 0.85rem; color: #bbb; text-decoration: none;">
+                    <i class="fas fa-arrow-left me-1"></i> Continue Shopping
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

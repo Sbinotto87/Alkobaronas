@@ -3,75 +3,65 @@
     ViewData["Title"] = "Register";
 }
 
-<div class="row w-100 justify-content-center">
-    <div class="col-md-7 col-lg-6">
-        <div class="card p-4 p-md-5 shadow-lg" style="background-color: #1e1e1e; border: 1px solid #333; border-radius: 12px;">
+<div class="fcard shadow-lg w-100" style="background: #fff; border-radius: 18px; padding: 38px; box-sizing: border-box;">
 
-            <!-- Header -->
-            <div class="text-center mb-4">
-                <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Create an <span style="color: #ffc107;">Account</span></h2>
-            </div>
-
-            <!-- Success Message Alert -->
-            @if (ViewBag.SuccessMessage != null)
-            {
-                <div class="alert alert-success text-center" role="alert">
-                    @ViewBag.SuccessMessage
-                </div>
-            }
-
-            <!-- Registration Form -->
-            <form asp-action="Register" method="post">
-
-                <!-- First Name & Last Name -->
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="firstName" class="form-label text-light">First Name <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control bg-dark text-light border-secondary" id="firstName" name="firstName" placeholder="John" required autocomplete="given-name" />
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="lastName" class="form-label text-light">Last Name <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control bg-dark text-light border-secondary" id="lastName" name="lastName" placeholder="Doe" required autocomplete="family-name" />
-                    </div>
-                </div>
-
-                <!-- Email Address -->
-                <div class="mb-3">
-                    <label for="email" class="form-label text-light">Email Address <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control bg-dark text-light border-secondary" id="email" name="email" placeholder="name@example.com" required autocomplete="email" />
-                </div>
-
-                <!-- Phone Number & Birth Date -->
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="phone" class="form-label text-light">Phone Number <span class="text-danger">*</span></label>
-                        <input type="tel" class="form-control bg-dark text-light border-secondary" id="phone" name="phone" placeholder="+370 600 00000" required autocomplete="tel" />
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="birthDate" class="form-label text-light">Birth Date <span class="text-danger">*</span></label>
-                        <input type="date" class="form-control bg-dark text-light border-secondary" id="birthDate" name="birthDate" required autocomplete="bday" />
-                    </div>
-                </div>
-
-                <!-- Password -->
-                <div class="mb-4">
-                    <label for="password" class="form-label text-light">Password <span class="text-danger">*</span></label>
-                    <input type="password" class="form-control bg-dark text-light border-secondary" id="password" name="password" placeholder="••••••••" required />
-                </div>
-
-                <!-- Submit Button -->
-                <div class="d-grid mb-3">
-                    <button type="submit" class="btn btn-danger py-2" style="font-weight: 600; background-color: #dc3545; border: none;">Register Now</button>
-                </div>
-
-                <!-- Footer Links -->
-                <div class="text-center mt-3">
-                    <p style="font-size: 0.85rem; color: #aaa;">
-                        Already have an account? <a href="@Url.Action("Login", "Account")" style="color: #ffc107; text-decoration: none;">Sign in here</a>
-                    </p>
-                </div>
-            </form>
-
-        </div>
+    <!-- Header -->
+    <div class="text-center mb-4">
+        <span class="slbl">Join Us Today</span>
+        <h2 class="stitle" style="font-size: 2rem;">Create an <span>Account</span></h2>
+        <div class="sline"></div>
+        <p class="sdesc">Sign up to order drinks and manage your delivery details</p>
     </div>
+    @if (ViewBag.SuccessMessage != null)
+    {
+        <div class="alert alert-success text-center" role="alert" style="font-size: 0.88rem;">
+            @ViewBag.SuccessMessage
+        </div>
+    }
+
+    <!-- Registration Form -->
+    <form asp-action="Register" method="post">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="firstName" class="flbl">First Name <span class="text-danger">*</span></label>
+                <input type="text" class="fctrl" id="firstName" name="firstName" placeholder="John" required autocomplete="given-name" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="lastName" class="flbl">Last Name <span class="text-danger">*</span></label>
+                <input type="text" class="fctrl" id="lastName" name="lastName" placeholder="Doe" required autocomplete="family-name" />
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="flbl">Email Address <span class="text-danger">*</span></label>
+            <input type="email" class="fctrl" id="email" name="email" placeholder="name@example.com" required autocomplete="email" />
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="phone" class="flbl">Phone Number <span class="text-danger">*</span></label>
+                <input type="tel" class="fctrl" id="phone" name="phone" placeholder="+370 600 00000" required autocomplete="tel" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="birthDate" class="flbl">Birth Date <span class="text-danger">*</span></label>
+                <input type="date" class="fctrl" id="birthDate" name="birthDate" required autocomplete="bday" />
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label for="password" class="flbl">Password <span class="text-danger">*</span></label>
+            <input type="password" class="fctrl" id="password" name="password" placeholder="••••••••" required />
+        </div>
+
+        <div class="d-grid mb-3">
+            <button type="submit" class="btn-red justify-content-center py-3">Register Now</button>
+        </div>
+
+        <div class="text-center mt-3">
+            <p style="font-size: 0.85rem; color: #777;">
+                Already have an account? <a href="@Url.Action("Login", "Account")" style="color: var(--primary); font-weight: 600;">Sign in here</a>
+            </p>
+        </div>
+    </form>
+
 </div>
