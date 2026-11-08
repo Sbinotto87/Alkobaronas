@@ -1,0 +1,259 @@
+﻿@{
+    ViewData["Title"] = "Provider Home Page";
+}
+
+<!-- ============================================================
+     FIX 1 – SEARCH OVERLAY POPUP
+     ============================================================ -->
+<div id="searchOv">
+    <button class="sovclose" id="searchClose"><i class="fas fa-times"></i></button>
+    <div class="sovbox">
+        <h4>What are you craving today boss?</h4>
+        <div class="sovinput">
+            <input type="text" id="searchInput" placeholder="Search drinks..." autocomplete="off" />
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================
+     OFFER MENU / PRODUCT CATALOGUE
+     ============================================================ -->
+<section id="menu">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="stitle">Inventory <span>Catalog</span></h2>
+            <div class="sline"></div>
+        </div>
+        <!-- Filter buttons -->
+        <div class="text-center mb-4" data-aos="fade-up">
+            <button class="filtbtn active" data-f="all">All</button>
+            <button class="filtbtn" data-f="wine">Wine</button>
+            <button class="filtbtn" data-f="beer">Beer</button>
+            <button class="filtbtn" data-f="ciders">Ciders</button>
+            <button class="filtbtn" data-f="spirits">Spirits</button>
+        </div>
+        <div class="row g-4" id="mgrid">
+            <!-- CARD 1: Wine -->
+            <div class="col-sm-6 col-lg-4 mwrap" data-c="wine" data-aos="fade-up">
+                <div class="mcard"
+                     data-img="~/img/menu/wine1.jpg"
+                     data-title="Reserve Cabernet Sauvignon"
+                     data-cat="Wine"
+                     data-price="$24.99" data-old="$32.99"
+                     data-rating="4.9" data-reviews="128"
+                     data-cal="13.5% ABV" data-time="750ml"
+                     data-desc="Rich full-bodied red wine with deep notes of blackberry, cassis, and a hint of French oak finish. Perfect paired with artisan cheeses and grilled steak."
+                     data-tags="Red Wine,Reserve,Dry">
+                    <div class="mimg">
+                        <img src="~/img/menu/wine1.jpg" alt="Cabernet Sauvignon" />
+                        <div class="mbdg hot"><i class="fas fa-star"></i> Featured</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="mbody">
+                        <div class="mcat">Wine</div>
+                        <div class="mtit">Reserve Cabernet Sauvignon</div>
+                        <div class="mdesc">Rich red with notes of blackberry, cassis, and French oak finish</div>
+                        <div class="mfoot">
+                            <div>
+                                <div class="mprice">$24.99 <small>$32.99</small></div>
+                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(128)</span></div>
+                            </div>
+                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 2: Beer -->
+            <div class="col-sm-6 col-lg-4 mwrap" data-c="beer" data-aos="fade-up" data-aos-delay="80">
+                <div class="mcard"
+                     data-img="~/img/menu/beer1.jpg"
+                     data-title="Hazy IPA Craft Brew"
+                     data-cat="Beer"
+                     data-price="$14.99" data-old="$17.99"
+                     data-rating="4.8" data-reviews="95"
+                     data-cal="6.8% ABV" data-time="4-pack (330ml)"
+                     data-desc="Juicy, unfiltered India Pale Ale loaded with tropical citrus and stone fruit hop aromas. Smooth mouthfeel with a refreshing citrus kick."
+                     data-tags="IPA,Craft,Unfiltered">
+                    <div class="mimg">
+                        <img src="~/img/menu/beer1.jpg" alt="Hazy IPA" />
+                        <div class="mbdg new"><i class="fas fa-star"></i> Popular</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="mbody">
+                        <div class="mcat">Beer</div>
+                        <div class="mtit">Hazy IPA Craft Brew</div>
+                        <div class="mdesc">Unfiltered IPA with tropical citrus notes and a smooth finish</div>
+                        <div class="mfoot">
+                            <div>
+                                <div class="mprice">$14.99 <small>$17.99</small></div>
+                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
+                            </div>
+                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 3: Ciders -->
+            <div class="col-sm-6 col-lg-4 mwrap" data-c="ciders" data-aos="fade-up" data-aos-delay="160">
+                <div class="mcard"
+                     data-img="~/img/menu/cider1.jpg"
+                     data-title="Crisp Orchard Apple Cider"
+                     data-cat="Ciders"
+                     data-price="$11.99" data-old="$14.99"
+                     data-rating="5.0" data-reviews="210"
+                     data-cal="4.5% ABV" data-time="4-pack (500ml)"
+                     data-desc="Crafted from hand-picked fresh pressed heritage apples. Naturally gluten-free, perfectly balanced between sweet and tart."
+                     data-tags="Gluten-Free,Sweet,Refreshing">
+                    <div class="mimg">
+                        <img src="~/img/menu/cider1.jpg" alt="Apple Cider" />
+                        <div class="mbdg"><i class="fas fa-star"></i> Best Seller</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="mbody">
+                        <div class="mcat">Ciders</div>
+                        <div class="mtit">Crisp Orchard Apple Cider</div>
+                        <div class="mdesc">Hand-pressed heritage apples, perfectly balanced between sweet and tart</div>
+                        <div class="mfoot">
+                            <div>
+                                <div class="mprice">$11.99 <small>$14.99</small></div>
+                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(210)</span></div>
+                            </div>
+                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 4: Spirits -->
+            <div class="col-sm-6 col-lg-4 mwrap" data-c="spirits" data-aos="fade-up">
+                <div class="mcard"
+                     data-img="~/img/menu/spirit1.jpg"
+                     data-title="Small Batch Kentucky Bourbon"
+                     data-cat="Spirits"
+                     data-price="$49.99" data-old=""
+                     data-rating="4.9" data-reviews="74"
+                     data-cal="45.0% ABV" data-time="750ml"
+                     data-desc="Aged in charred white oak barrels yielding rich caramel, vanilla, and toasted nut flavors with a long, warming finish."
+                     data-tags="Bourbon,Aged,Smooth">
+                    <div class="mimg">
+                        <img src="~/img/menu/spirit1.jpg" alt="Bourbon" />
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="mbody">
+                        <div class="mcat">Spirits</div>
+                        <div class="mtit">Small Batch Kentucky Bourbon</div>
+                        <div class="mdesc">Aged in charred oak with notes of caramel, vanilla, and toasted nuts</div>
+                        <div class="mfoot">
+                            <div>
+                                <div class="mprice">$49.99</div>
+                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(74)</span></div>
+                            </div>
+                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 5: Wine -->
+            <div class="col-sm-6 col-lg-4 mwrap" data-c="wine" data-aos="fade-up" data-aos-delay="80">
+                <div class="mcard"
+                     data-img="~/img/menu/wine2.jpg"
+                     data-title="Proscuitto-Friendly Sparkling Prosecco"
+                     data-cat="Wine"
+                     data-price="$18.99" data-old="$22.99"
+                     data-rating="4.9" data-reviews="56"
+                     data-cal="11.0% ABV" data-time="750ml"
+                     data-desc="Vibrant Italian sparkling wine with delicate bubbles, refreshing green apple notes, and a crisp white peach finish."
+                     data-tags="Sparkling,Italian,Brut">
+                    <div class="mimg">
+                        <img src="~/img/menu/wine2.jpg" alt="Prosecco" />
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="mbody">
+                        <div class="mcat">Wine</div>
+                        <div class="mtit">Sparkling Prosecco DOC</div>
+                        <div class="mdesc">Delicate bubbles with green apple notes and a crisp white peach finish</div>
+                        <div class="mfoot">
+                            <div>
+                                <div class="mprice">$18.99 <small>$22.99</small></div>
+                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(56)</span></div>
+                            </div>
+                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 6: Spirits -->
+            <div class="col-sm-6 col-lg-4 mwrap" data-c="spirits" data-aos="fade-up" data-aos-delay="160">
+                <div class="mcard"
+                     data-img="~/img/menu/spirit2.jpg"
+                     data-title="Botanical London Dry Gin"
+                     data-cat="Spirits"
+                     data-price="$36.99" data-old=""
+                     data-rating="4.9" data-reviews="88"
+                     data-cal="40.0% ABV" data-time="750ml"
+                     data-desc="Distilled with hand-forged botanicals, juniper berries, fresh cucumber, and citrus peel. Exceptionally crisp and fragrant."
+                     data-tags="Gin,Botanical,Cocktail">
+                    <div class="mimg">
+                        <img src="~/img/menu/spirit2.jpg" alt="Gin" />
+                        <div class="mbdg hot">Staff Pick</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="mbody">
+                        <div class="mcat">Spirits</div>
+                        <div class="mtit">Botanical London Dry Gin</div>
+                        <div class="mdesc">Distilled with hand-forged juniper, cucumber, and citrus peel</div>
+                        <div class="mfoot">
+                            <div>
+                                <div class="mprice">$36.99</div>
+                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(88)</span></div>
+                            </div>
+                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end #mgrid -->
+        <div class="text-center mt-5"><a href="#" class="btn-red"><i class="fas fa-th-large"></i>View Full Catalogue</a></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     PRODUCT DETAIL POPUP MODAL
+     ============================================================ -->
+<div id="menuPop">
+    <div class="mpbox">
+        <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
+        <div class="mpimg"><img id="mpImg" src="" alt="" /></div>
+        <div class="mpbody">
+            <div id="mpCat"></div>
+            <div id="mpTitle"></div>
+            <div id="mpStars"></div>
+            <div id="mpDesc"></div>
+            <div id="mpPrice"></div>
+            <div class="mpmeta" id="mpMeta"></div>
+            <div class="mpqty">
+                <button class="mpqbtn" id="mpMinus">-</button>
+                <span class="mpqnum" id="mpQnum">1</span>
+                <button class="mpqbtn" id="mpPlus">+</button>
+                <span style="font-size:.82rem;color:#aaa;margin-left:9px;">bottle(s)</span>
+            </div>
+            <button class="mpaddcart" id="mpAddCart"><i class="fas fa-shopping-cart"></i>Modify Listing</button>
+        </div>
+    </div>
+</div>
+<!-- Back to top -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+@section Scripts {
+    <!-- Template JS plugins needed for the menu/catalog features -->
+    <script src="~/js/aos.js"></script>
+    <script src="~/js/swiper-bundle.min.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <script>
+        // Initialize AOS if needed
+        if (typeof AOS !== 'undefined') { AOS.init(); }
+    </script>
+}

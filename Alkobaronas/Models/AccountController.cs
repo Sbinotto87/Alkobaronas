@@ -51,8 +51,7 @@ namespace Alkobaronas.Models
             }
             else if (normalizedUser == "provider")
             {
-                ViewBag.Message = "Logged in as Provider (Dashboard coming soon)";
-                return View();
+                return RedirectToAction("Index", "HomeProvider");
             }
             else
             {
