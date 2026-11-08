@@ -1,0 +1,65 @@
+﻿@{
+    Layout = "_AuthLayout";
+    ViewData["Title"] = "Login";
+}
+
+<div class="row w-100 justify-content-center">
+    <div class="col-md-5 col-lg-4">
+        <div class="card p-4 p-md-5 shadow-lg" style="background-color: #1e1e1e; border: 1px solid #333; border-radius: 12px;">
+
+            <!-- Header -->
+            <div class="text-center mb-4">
+                <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Welcome <span style="color: #ffc107;">Back</span></h2>
+                <p class="text-muted" style="font-size: 0.9rem;">Sign in to access your account</p>
+            </div>
+
+            <!-- Feedback Messages -->
+            @if (ViewBag.Message != null)
+            {
+                <div class="alert alert-info text-center" role="alert" style="font-size: 0.85rem;">
+                    @ViewBag.Message
+                </div>
+            }
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger text-center" role="alert" style="font-size: 0.85rem;">
+                    @ViewBag.ErrorMessage
+                </div>
+            }
+
+            <!-- Login Form -->
+            <form asp-action="Login" method="post">
+
+                <div class="mb-3">
+                    <label for="username" class="form-label text-light">Username</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" id="username" name="username" placeholder="user, admin, or provider" required autocomplete="username" />
+                </div>
+
+                <div class="mb-4">
+                    <label for="password" class="form-label text-light">Password</label>
+                    <input type="password" class="form-control bg-dark text-light border-secondary" id="password" name="password" placeholder="••••••••" />
+                    <div class="form-text text-muted" style="font-size: 0.75rem;">Password is optional for the prototype.</div>
+                </div>
+
+                <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-danger py-2" style="font-weight: 600; background-color: #dc3545; border: none;">Sign In</button>
+                </div>
+
+                <!-- Prototype Hint Box -->
+                <div class="p-2 mb-3 rounded" style="background-color: #262626; border: 1px dashed #444; font-size: 0.75rem; color: #aaa;">
+                    <strong>Prototype Hint:</strong><br />
+                    • Type <code>user</code> to link to Home.<br />
+                    • Type <code>admin</code> or <code>provider</code> for placeholders.
+                </div>
+
+                <!-- Footer Links -->
+                <div class="text-center mt-3">
+                    <p style="font-size: 0.85rem; color: #aaa;">
+                        Don't have an account? <a href="@Url.Action("Register", "Account")" style="color: #ffc107; text-decoration: none;">Register here</a>
+                    </p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
