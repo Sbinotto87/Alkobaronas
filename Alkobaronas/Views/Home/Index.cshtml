@@ -2,385 +2,356 @@
     ViewData["Title"] = "Home Page";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="">
-    <title>Sarab - Fast Food & Restaurant HTML Template</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
-    <!-- Bootstrap 5.3 -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <!-- AOS Animate on Scroll -->
-    <link href="css/aos.css" rel="stylesheet" />
-    <!-- Swiper -->
-    <link href="css/swiper-bundle.min.css" rel="stylesheet" />
-    <!-- all min css -->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <!-- magnific CSS -->
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400" rel="stylesheet" type="text/css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-</head>
-<body>
-    <!-- ============================================================
-         FIX 1 � SEARCH OVERLAY POPUP
-         ============================================================ -->
-    <div id="searchOv">
-        <button class="sovclose" id="searchClose"><i class="fas fa-times"></i></button>
-        <div class="sovbox">
-            <h4>What are you craving today boss?</h4>
-            <div class="sovinput">
-                <input type="text" id="searchInput" placeholder="Search drinks..." autocomplete="off" />
-                <button><i class="fas fa-search"></i></button>
+<!-- ============================================================
+     FIX 1 – SEARCH OVERLAY POPUP
+     ============================================================ -->
+<div id="searchOv">
+    <button class="sovclose" id="searchClose"><i class="fas fa-times"></i></button>
+    <div class="sovbox">
+        <h4>What are you craving today boss?</h4>
+        <div class="sovinput">
+            <input type="text" id="searchInput" placeholder="Search drinks..." autocomplete="off" />
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</div>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+    <div class="hs hs1"></div>
+    <div class="hs hs2"></div>
+    <div class="hbgtxt">FOOD</div>
+    <div class="container">
+        <div class="row align-items-center g-5" style="min-height:88vh;">
+            <div class="col-lg-6">
+                <div class="hbadge">
+                    <div class="hbi"><i class="fas fa-star"></i></div>
+                    <span>#1 Rated beer slingers in Mažeikiai</span>
+                </div>
+                <h1 class="htitle">Fast <span class="hl">Cheap</span><br />Delicious</h1>
+                <p class="hdesc">Drinks from all over the world right at your doorstep</p>
+                <div class="d-flex flex-wrap gap-3 mb-2">
+                    <a href="#menu" class="btn-red"><i class="fas fa-utensils"></i>Explore Menu</a>
+                </div>
+                <div class="hstats d-flex gap-3 flex-wrap mt-4">
+                    <div class="hstat"><span class="snum">3mil<em>+</em></span><small>Happy Customers</small></div>
+                    <div class="sdiv"></div>
+                    <div class="hstat"><span class="snum">150<em>+</em></span><small>Expert breweries and distilleries</small></div>
+                    <div class="sdiv"></div>
+                    <div class="hstat"><span class="snum">837<em>yr</em></span><small>Experience</small></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div style="position:relative;text-align:center;">
+                    <div class="hcircle">
+                        <img src="~/img/banner-img.jpg" alt="Burger" />
+                    </div>
+                    <div class="fcard fc1">
+                        <div class="fcoi r"><i class="fas fa-fire"></i></div>
+                        <div><span class="fcnum">Hot Deal</span><span class="fcsm">0% off today</span></div>
+                    </div>
+                    <div class="fcard fc2">
+                        <div class="fcoi y"><i class="fas fa-star"></i></div>
+                        <div><span class="fcnum">4.9/5</span><span class="fcsm">2k+ reviews</span></div>
+                    </div>
+                    <div class="fcard fc3">
+                        <div class="fcoi g"><i class="fas fa-clock"></i></div>
+                        <div><span class="fcnum">2 day</span><span class="fcsm">Fast delivery</span></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- ============================================================
-         HERO
-         ============================================================ -->
-    <section id="hero">
-        <div class="hs hs1"></div>
-        <div class="hs hs2"></div>
-        <div class="hbgtxt">FOOD</div>
-        <div class="container">
-            <div class="row align-items-center g-5" style="min-height:88vh;">
-                <div class="col-lg-6">
-                    <div class="hbadge">
-                        <div class="hbi"><i class="fas fa-star"></i></div>
-                        <span>#1 Rated beer slingers in Mažeikiai</span>
-                    </div>
-                    <h1 class="htitle">Fast <span class="hl">Cheap</span><br />Delicious</h1>
-                    <p class="hdesc">Drinks from all over the world right at your doorstep</p>
-                    <div class="d-flex flex-wrap gap-3 mb-2">
-                        <a href="#menu" class="btn-red"><i class="fas fa-utensils"></i>Explore Menu</a>
-                    </div>
-                    <div class="hstats d-flex gap-3 flex-wrap mt-4">
-                        <div class="hstat"><span class="snum">3mil<em>+</em></span><small>Happy Customers</small></div>
-                        <div class="sdiv"></div>
-                        <div class="hstat"><span class="snum">150<em>+</em></span><small>Expert breweries and distilleries</small></div>
-                        <div class="sdiv"></div>
-                        <div class="hstat"><span class="snum">837<em>yr</em></span><small>Experience</small></div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div style="position:relative;text-align:center;">
-                        <div class="hcircle">
-                            <img src="img/banner-img.jpg" alt="Burger" />
-                        </div>
-                        <div class="fcard fc1">
-                            <div class="fcoi r"><i class="fas fa-fire"></i></div>
-                            <div><span class="fcnum">Hot Deal</span><span class="fcsm">0% off today</span></div>
-                        </div>
-                        <div class="fcard fc2">
-                            <div class="fcoi y"><i class="fas fa-star"></i></div>
-                            <div><span class="fcnum">4.9/5</span><span class="fcsm">2k+ reviews</span></div>
-                        </div>
-                        <div class="fcard fc3">
-                            <div class="fcoi g"><i class="fas fa-clock"></i></div>
-                            <div><span class="fcnum">2 day</span><span class="fcsm">Fast delivery</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+</section>
+<!-- CATEGORY -->
+<section id="category">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="slbl">Curated Collection</span>
+            <h2 class="stitle">Browse by <span>Category</span></h2>
+            <div class="sline"></div>
+            <p class="sdesc mx-auto" style="max-width:480px;">From crisp local ciders to aged reserve spirits - discover your perfect pour</p>
         </div>
-    </section>
-    <!-- CATEGORY -->
-    <section id="category">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <span class="slbl">Curated Collection</span>
-                <h2 class="stitle">Browse by <span>Category</span></h2>
-                <div class="sline"></div>
-                <p class="sdesc mx-auto" style="max-width:480px;">From crisp local ciders to aged reserve spirits - discover your perfect pour</p>
-            </div>
-            <div class="row g-3 justify-content-center">
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="0">
-                    <div class="catcard active" data-filter="all">
-                        <img class="catimg" src="img/category/all.jpg" alt="All Drinks" />
-                        <div class="catnm">All Bottles</div>
-                        <div class="catct">120 items</div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="70">
-                    <div class="catcard" data-filter="wine">
-                        <img class="catimg" src="img/category/wine.jpg" alt="Wine" />
-                        <div class="catnm">Wine</div>
-                        <div class="catct">45 items</div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="140">
-                    <div class="catcard" data-filter="beer">
-                        <img class="catimg" src="img/category/beer.jpg" alt="Beer" />
-                        <div class="catnm">Beer</div>
-                        <div class="catct">35 items</div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="210">
-                    <div class="catcard" data-filter="ciders">
-                        <img class="catimg" src="img/category/cider.jpg" alt="Ciders" />
-                        <div class="catnm">Ciders</div>
-                        <div class="catct">18 items</div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="280">
-                    <div class="catcard" data-filter="spirits">
-                        <img class="catimg" src="img/category/spirits.jpg" alt="Spirits" />
-                        <div class="catnm">Spirits</div>
-                        <div class="catct">22 items</div>
-                    </div>
+        <div class="row g-3 justify-content-center">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="0">
+                <div class="catcard active" data-filter="all">
+                    <img class="catimg" src="~/img/category/all.jpg" alt="All Drinks" />
+                    <div class="catnm">All Bottles</div>
+                    <div class="catct">120 items</div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-         OFFER MENU / PRODUCT CATALOGUE
-         ============================================================ -->
-    <section id="menu">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="stitle">Our Bottle <span>Catalog</span></h2>
-                <div class="sline"></div>
-            </div>
-            <!-- Filter buttons -->
-            <div class="text-center mb-4" data-aos="fade-up">
-                <button class="filtbtn active" data-f="all">All</button>
-                <button class="filtbtn" data-f="wine">Wine</button>
-                <button class="filtbtn" data-f="beer">Beer</button>
-                <button class="filtbtn" data-f="ciders">Ciders</button>
-                <button class="filtbtn" data-f="spirits">Spirits</button>
-            </div>
-            <div class="row g-4" id="mgrid">
-                <!-- CARD 1: Wine -->
-                <div class="col-sm-6 col-lg-4 mwrap" data-c="wine" data-aos="fade-up">
-                    <div class="mcard"
-                         data-img="img/menu/wine1.jpg"
-                         data-title="Reserve Cabernet Sauvignon"
-                         data-cat="Wine"
-                         data-price="$24.99" data-old="$32.99"
-                         data-rating="4.9" data-reviews="128"
-                         data-cal="13.5% ABV" data-time="750ml"
-                         data-desc="Rich full-bodied red wine with deep notes of blackberry, cassis, and a hint of French oak finish. Perfect paired with artisan cheeses and grilled steak."
-                         data-tags="Red Wine,Reserve,Dry">
-                        <div class="mimg">
-                            <img src="img/menu/wine1.jpg" alt="Cabernet Sauvignon" />
-                            <div class="mbdg hot"><i class="fas fa-star"></i> Featured</div>
-                            <div class="mhrt"><i class="far fa-heart"></i></div>
-                        </div>
-                        <div class="mbody">
-                            <div class="mcat">Wine</div>
-                            <div class="mtit">Reserve Cabernet Sauvignon</div>
-                            <div class="mdesc">Rich red with notes of blackberry, cassis, and French oak finish</div>
-                            <div class="mfoot">
-                                <div>
-                                    <div class="mprice">$24.99 <small>$32.99</small></div>
-                                    <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(128)</span></div>
-                                </div>
-                                <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- CARD 2: Beer -->
-                <div class="col-sm-6 col-lg-4 mwrap" data-c="beer" data-aos="fade-up" data-aos-delay="80">
-                    <div class="mcard"
-                         data-img="img/menu/beer1.jpg"
-                         data-title="Hazy IPA Craft Brew"
-                         data-cat="Beer"
-                         data-price="$14.99" data-old="$17.99"
-                         data-rating="4.8" data-reviews="95"
-                         data-cal="6.8% ABV" data-time="4-pack (330ml)"
-                         data-desc="Juicy, unfiltered India Pale Ale loaded with tropical citrus and stone fruit hop aromas. Smooth mouthfeel with a refreshing citrus kick."
-                         data-tags="IPA,Craft,Unfiltered">
-                        <div class="mimg">
-                            <img src="img/menu/beer1.jpg" alt="Hazy IPA" />
-                            <div class="mbdg new"><i class="fas fa-star"></i> Popular</div>
-                            <div class="mhrt"><i class="far fa-heart"></i></div>
-                        </div>
-                        <div class="mbody">
-                            <div class="mcat">Beer</div>
-                            <div class="mtit">Hazy IPA Craft Brew</div>
-                            <div class="mdesc">Unfiltered IPA with tropical citrus notes and a smooth finish</div>
-                            <div class="mfoot">
-                                <div>
-                                    <div class="mprice">$14.99 <small>$17.99</small></div>
-                                    <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
-                                </div>
-                                <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- CARD 3: Ciders -->
-                <div class="col-sm-6 col-lg-4 mwrap" data-c="ciders" data-aos="fade-up" data-aos-delay="160">
-                    <div class="mcard"
-                         data-img="img/menu/cider1.jpg"
-                         data-title="Crisp Orchard Apple Cider"
-                         data-cat="Ciders"
-                         data-price="$11.99" data-old="$14.99"
-                         data-rating="5.0" data-reviews="210"
-                         data-cal="4.5% ABV" data-time="4-pack (500ml)"
-                         data-desc="Crafted from hand-picked fresh pressed heritage apples. Naturally gluten-free, perfectly balanced between sweet and tart."
-                         data-tags="Gluten-Free,Sweet,Refreshing">
-                        <div class="mimg">
-                            <img src="img/menu/cider1.jpg" alt="Apple Cider" />
-                            <div class="mbdg"><i class="fas fa-star"></i> Best Seller</div>
-                            <div class="mhrt"><i class="far fa-heart"></i></div>
-                        </div>
-                        <div class="mbody">
-                            <div class="mcat">Ciders</div>
-                            <div class="mtit">Crisp Orchard Apple Cider</div>
-                            <div class="mdesc">Hand-pressed heritage apples, perfectly balanced between sweet and tart</div>
-                            <div class="mfoot">
-                                <div>
-                                    <div class="mprice">$11.99 <small>$14.99</small></div>
-                                    <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(210)</span></div>
-                                </div>
-                                <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- CARD 4: Spirits -->
-                <div class="col-sm-6 col-lg-4 mwrap" data-c="spirits" data-aos="fade-up">
-                    <div class="mcard"
-                         data-img="img/menu/spirit1.jpg"
-                         data-title="Small Batch Kentucky Bourbon"
-                         data-cat="Spirits"
-                         data-price="$49.99" data-old=""
-                         data-rating="4.9" data-reviews="74"
-                         data-cal="45.0% ABV" data-time="750ml"
-                         data-desc="Aged in charred white oak barrels yielding rich caramel, vanilla, and toasted nut flavors with a long, warming finish."
-                         data-tags="Bourbon,Aged,Smooth">
-                        <div class="mimg">
-                            <img src="img/menu/spirit1.jpg" alt="Bourbon" />
-                            <div class="mhrt"><i class="far fa-heart"></i></div>
-                        </div>
-                        <div class="mbody">
-                            <div class="mcat">Spirits</div>
-                            <div class="mtit">Small Batch Kentucky Bourbon</div>
-                            <div class="mdesc">Aged in charred oak with notes of caramel, vanilla, and toasted nuts</div>
-                            <div class="mfoot">
-                                <div>
-                                    <div class="mprice">$49.99</div>
-                                    <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(74)</span></div>
-                                </div>
-                                <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- CARD 5: Wine -->
-                <div class="col-sm-6 col-lg-4 mwrap" data-c="wine" data-aos="fade-up" data-aos-delay="80">
-                    <div class="mcard"
-                         data-img="img/menu/wine2.jpg"
-                         data-title="Proscuitto-Friendly Sparkling Prosecco"
-                         data-cat="Wine"
-                         data-price="$18.99" data-old="$22.99"
-                         data-rating="4.9" data-reviews="56"
-                         data-cal="11.0% ABV" data-time="750ml"
-                         data-desc="Vibrant Italian sparkling wine with delicate bubbles, refreshing green apple notes, and a crisp white peach finish."
-                         data-tags="Sparkling,Italian,Brut">
-                        <div class="mimg">
-                            <img src="img/menu/wine2.jpg" alt="Prosecco" />
-                            <div class="mbdg new"><i class="fas fa-star"></i> New</div>
-                            <div class="mhrt"><i class="far fa-heart"></i></div>
-                        </div>
-                        <div class="mbody">
-                            <div class="mcat">Wine</div>
-                            <div class="mtit">Sparkling Prosecco DOC</div>
-                            <div class="mdesc">Delicate bubbles with green apple notes and a crisp white peach finish</div>
-                            <div class="mfoot">
-                                <div>
-                                    <div class="mprice">$18.99 <small>$22.99</small></div>
-                                    <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(56)</span></div>
-                                </div>
-                                <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- CARD 6: Spirits -->
-                <div class="col-sm-6 col-lg-4 mwrap" data-c="spirits" data-aos="fade-up" data-aos-delay="160">
-                    <div class="mcard"
-                         data-img="img/menu/spirit2.jpg"
-                         data-title="Botanical London Dry Gin"
-                         data-cat="Spirits"
-                         data-price="$36.99" data-old=""
-                         data-rating="4.9" data-reviews="88"
-                         data-cal="40.0% ABV" data-time="750ml"
-                         data-desc="Distilled with hand-forged botanicals, juniper berries, fresh cucumber, and citrus peel. Exceptionally crisp and fragrant."
-                         data-tags="Gin,Botanical,Cocktail">
-                        <div class="mimg">
-                            <img src="img/menu/spirit2.jpg" alt="Gin" />
-                            <div class="mbdg hot">Staff Pick</div>
-                            <div class="mhrt"><i class="far fa-heart"></i></div>
-                        </div>
-                        <div class="mbody">
-                            <div class="mcat">Spirits</div>
-                            <div class="mtit">Botanical London Dry Gin</div>
-                            <div class="mdesc">Distilled with hand-forged juniper, cucumber, and citrus peel</div>
-                            <div class="mfoot">
-                                <div>
-                                    <div class="mprice">$36.99</div>
-                                    <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(88)</span></div>
-                                </div>
-                                <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="70">
+                <div class="catcard" data-filter="wine">
+                    <img class="catimg" src="~/img/category/wine.jpg" alt="Wine" />
+                    <div class="catnm">Wine</div>
+                    <div class="catct">45 items</div>
                 </div>
             </div>
-            <!-- end #mgrid -->
-            <div class="text-center mt-5"><a href="#" class="btn-red"><i class="fas fa-th-large"></i>View Full Catalogue</a></div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-         PRODUCT DETAIL POPUP MODAL
-         ============================================================ -->
-    <div id="menuPop">
-        <div class="mpbox">
-            <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
-            <div class="mpimg"><img id="mpImg" src="" alt="" /></div>
-            <div class="mpbody">
-                <div id="mpCat"></div>
-                <div id="mpTitle"></div>
-                <div id="mpStars"></div>
-                <div id="mpDesc"></div>
-                <div id="mpPrice"></div>
-                <div class="mpmeta" id="mpMeta"></div>
-                <div class="mpqty">
-                    <button class="mpqbtn" id="mpMinus">-</button>
-                    <span class="mpqnum" id="mpQnum">1</span>
-                    <button class="mpqbtn" id="mpPlus">+</button>
-                    <span style="font-size:.82rem;color:#aaa;margin-left:9px;">bottle(s)</span>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="140">
+                <div class="catcard" data-filter="beer">
+                    <img class="catimg" src="~/img/category/beer.jpg" alt="Beer" />
+                    <div class="catnm">Beer</div>
+                    <div class="catct">35 items</div>
                 </div>
-                <div class="mptags" id="mpTags"></div>
-                <button class="mpaddcart" id="mpAddCart"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="210">
+                <div class="catcard" data-filter="ciders">
+                    <img class="catimg" src="~/img/category/cider.jpg" alt="Ciders" />
+                    <div class="catnm">Ciders</div>
+                    <div class="catct">18 items</div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="280">
+                <div class="catcard" data-filter="spirits">
+                    <img class="catimg" src="~/img/category/spirits.jpg" alt="Spirits" />
+                    <div class="catnm">Spirits</div>
+                    <div class="catct">22 items</div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Back to top -->
-    <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+</section>
 
-    <!-- jQuery -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap 5 -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- AOS -->
-    <script src="js/aos.js"></script>
-    <!-- Swiper -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- CounterUp -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <!-- Main js -->
-    <script src="js/main.js"></script>
-</body>
-</html>
+<!-- ============================================================
+     OFFER MENU / PRODUCT CATALOGUE
+     ============================================================ -->
+<section id="menu">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="stitle">Our Bottle <span>Catalog</span></h2>
+            <div class="sline"></div>
+        </div>
+        <!-- Filter buttons -->
+        <div class="text-center mb-4" data-aos="fade-up">
+            <button class="filtbtn active" data-f="all">All</button>
+            <button class="filtbtn" data-f="wine">Wine</button>
+            <button class="filtbtn" data-f="beer">Beer</button>
+            <button class="filtbtn" data-f="ciders">Ciders</button>
+            <button class="filtbtn" data-f="spirits">Spirits</button>
+        </div>
+        <div class="row g-4" id="mgrid">
+            <!-- CARD 1: Wine -->
+            <div class="col-sm-6 col-lg-4 mwrap" data-c="wine" data-aos="fade-up">
+                <div class="mcard"
+                     data-img="~/img/menu/wine1.jpg"
+                     data-title="Reserve Cabernet Sauvignon"
+                     data-cat="Wine"
+                     data-price="$24.99" data-old="$32.99"
+                     data-rating="4.9" data-reviews="128"
+                     data-cal="13.5% ABV" data-time="750ml"
+                     data-desc="Rich full-bodied red wine with deep notes of blackberry, cassis, and a hint of French oak finish. Perfect paired with artisan cheeses and grilled steak."
+                     data-tags="Red Wine,Reserve,Dry">
+                    <div class="mimg">
+                        <img src="~/img/menu/wine1.jpg" alt="Cabernet Sauvignon" />
+                        <div class="mbdg hot"><i class="fas fa-star"></i> Featured</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="mbody">
+                        <div class="mcat">Wine</div>
+                        <div class="mtit">Reserve Cabernet Sauvignon</div>
+                        <div class="mdesc">Rich red with notes of blackberry, cassis, and French oak finish</div>
+                        <div class="mfoot">
+                            <div>
+                                <div class="mprice">$24.99 <small>$32.99</small></div>
+                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(128)</span></div>
+                            </div>
+                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 2: Beer -->
+            <div class="col-sm-6 col-lg-4 mwrap" data-c="beer" data-aos="fade-up" data-aos-delay="80">
+                <div class="mcard"
+                     data-img="~/img/menu/beer1.jpg"
+                     data-title="Hazy IPA Craft Brew"
+                     data-cat="Beer"
+                     data-price="$14.99" data-old="$17.99"
+                     data-rating="4.8" data-reviews="95"
+                     data-cal="6.8% ABV" data-time="4-pack (330ml)"
+                     data-desc="Juicy, unfiltered India Pale Ale loaded with tropical citrus and stone fruit hop aromas. Smooth mouthfeel with a refreshing citrus kick."
+                     data-tags="IPA,Craft,Unfiltered">
+                    <div class="mimg">
+                        <img src="~/img/menu/beer1.jpg" alt="Hazy IPA" />
+                        <div class="mbdg new"><i class="fas fa-star"></i> Popular</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="mbody">
+                        <div class="mcat">Beer</div>
+                        <div class="mtit">Hazy IPA Craft Brew</div>
+                        <div class="mdesc">Unfiltered IPA with tropical citrus notes and a smooth finish</div>
+                        <div class="mfoot">
+                            <div>
+                                <div class="mprice">$14.99 <small>$17.99</small></div>
+                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
+                            </div>
+                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 3: Ciders -->
+            <div class="col-sm-6 col-lg-4 mwrap" data-c="ciders" data-aos="fade-up" data-aos-delay="160">
+                <div class="mcard"
+                     data-img="~/img/menu/cider1.jpg"
+                     data-title="Crisp Orchard Apple Cider"
+                     data-cat="Ciders"
+                     data-price="$11.99" data-old="$14.99"
+                     data-rating="5.0" data-reviews="210"
+                     data-cal="4.5% ABV" data-time="4-pack (500ml)"
+                     data-desc="Crafted from hand-picked fresh pressed heritage apples. Naturally gluten-free, perfectly balanced between sweet and tart."
+                     data-tags="Gluten-Free,Sweet,Refreshing">
+                    <div class="mimg">
+                        <img src="~/img/menu/cider1.jpg" alt="Apple Cider" />
+                        <div class="mbdg"><i class="fas fa-star"></i> Best Seller</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="mbody">
+                        <div class="mcat">Ciders</div>
+                        <div class="mtit">Crisp Orchard Apple Cider</div>
+                        <div class="mdesc">Hand-pressed heritage apples, perfectly balanced between sweet and tart</div>
+                        <div class="mfoot">
+                            <div>
+                                <div class="mprice">$11.99 <small>$14.99</small></div>
+                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(210)</span></div>
+                            </div>
+                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 4: Spirits -->
+            <div class="col-sm-6 col-lg-4 mwrap" data-c="spirits" data-aos="fade-up">
+                <div class="mcard"
+                     data-img="~/img/menu/spirit1.jpg"
+                     data-title="Small Batch Kentucky Bourbon"
+                     data-cat="Spirits"
+                     data-price="$49.99" data-old=""
+                     data-rating="4.9" data-reviews="74"
+                     data-cal="45.0% ABV" data-time="750ml"
+                     data-desc="Aged in charred white oak barrels yielding rich caramel, vanilla, and toasted nut flavors with a long, warming finish."
+                     data-tags="Bourbon,Aged,Smooth">
+                    <div class="mimg">
+                        <img src="~/img/menu/spirit1.jpg" alt="Bourbon" />
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="mbody">
+                        <div class="mcat">Spirits</div>
+                        <div class="mtit">Small Batch Kentucky Bourbon</div>
+                        <div class="mdesc">Aged in charred oak with notes of caramel, vanilla, and toasted nuts</div>
+                        <div class="mfoot">
+                            <div>
+                                <div class="mprice">$49.99</div>
+                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(74)</span></div>
+                            </div>
+                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 5: Wine -->
+            <div class="col-sm-6 col-lg-4 mwrap" data-c="wine" data-aos="fade-up" data-aos-delay="80">
+                <div class="mcard"
+                     data-img="~/img/menu/wine2.jpg"
+                     data-title="Proscuitto-Friendly Sparkling Prosecco"
+                     data-cat="Wine"
+                     data-price="$18.99" data-old="$22.99"
+                     data-rating="4.9" data-reviews="56"
+                     data-cal="11.0% ABV" data-time="750ml"
+                     data-desc="Vibrant Italian sparkling wine with delicate bubbles, refreshing green apple notes, and a crisp white peach finish."
+                     data-tags="Sparkling,Italian,Brut">
+                    <div class="mimg">
+                        <img src="~/img/menu/wine2.jpg" alt="Prosecco" />
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="mbody">
+                        <div class="mcat">Wine</div>
+                        <div class="mtit">Sparkling Prosecco DOC</div>
+                        <div class="mdesc">Delicate bubbles with green apple notes and a crisp white peach finish</div>
+                        <div class="mfoot">
+                            <div>
+                                <div class="mprice">$18.99 <small>$22.99</small></div>
+                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(56)</span></div>
+                            </div>
+                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARD 6: Spirits -->
+            <div class="col-sm-6 col-lg-4 mwrap" data-c="spirits" data-aos="fade-up" data-aos-delay="160">
+                <div class="mcard"
+                     data-img="~/img/menu/spirit2.jpg"
+                     data-title="Botanical London Dry Gin"
+                     data-cat="Spirits"
+                     data-price="$36.99" data-old=""
+                     data-rating="4.9" data-reviews="88"
+                     data-cal="40.0% ABV" data-time="750ml"
+                     data-desc="Distilled with hand-forged botanicals, juniper berries, fresh cucumber, and citrus peel. Exceptionally crisp and fragrant."
+                     data-tags="Gin,Botanical,Cocktail">
+                    <div class="mimg">
+                        <img src="~/img/menu/spirit2.jpg" alt="Gin" />
+                        <div class="mbdg hot">Staff Pick</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="mbody">
+                        <div class="mcat">Spirits</div>
+                        <div class="mtit">Botanical London Dry Gin</div>
+                        <div class="mdesc">Distilled with hand-forged juniper, cucumber, and citrus peel</div>
+                        <div class="mfoot">
+                            <div>
+                                <div class="mprice">$36.99</div>
+                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(88)</span></div>
+                            </div>
+                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end #mgrid -->
+        <div class="text-center mt-5"><a href="#" class="btn-red"><i class="fas fa-th-large"></i>View Full Catalogue</a></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     PRODUCT DETAIL POPUP MODAL
+     ============================================================ -->
+<div id="menuPop">
+    <div class="mpbox">
+        <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
+        <div class="mpimg"><img id="mpImg" src="" alt="" /></div>
+        <div class="mpbody">
+            <div id="mpCat"></div>
+            <div id="mpTitle"></div>
+            <div id="mpStars"></div>
+            <div id="mpDesc"></div>
+            <div id="mpPrice"></div>
+            <div class="mpmeta" id="mpMeta"></div>
+            <div class="mpqty">
+                <button class="mpqbtn" id="mpMinus">-</button>
+                <span class="mpqnum" id="mpQnum">1</span>
+                <button class="mpqbtn" id="mpPlus">+</button>
+                <span style="font-size:.82rem;color:#aaa;margin-left:9px;">bottle(s)</span>
+            </div>
+            <div class="mptags" id="mpTags"></div>
+            <button class="mpaddcart" id="mpAddCart"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
+        </div>
+    </div>
+</div>
+<!-- Back to top -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+@section Scripts {
+    <!-- Template JS plugins needed for the menu/catalog features -->
+    <script src="~/js/aos.js"></script>
+    <script src="~/js/swiper-bundle.min.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <script>
+        // Initialize AOS if needed
+        if (typeof AOS !== 'undefined') { AOS.init(); }
+    </script>
+}
