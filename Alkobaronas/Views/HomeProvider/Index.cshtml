@@ -1,4 +1,5 @@
 ﻿@{
+    Layout = "_LayoutProvider";
     ViewData["Title"] = "Provider Home Page";
 }
 
@@ -17,12 +18,12 @@
 </div>
 
 <!-- ============================================================
-     OFFER MENU / PRODUCT CATALOGUE
+     INVENTORY BACK-END CATALOGUE
      ============================================================ -->
 <section id="menu">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="stitle">Inventory <span>Catalog</span></h2>
+            <h2 class="stitle">Back-End <span>Inventory</span></h2>
             <div class="sline"></div>
         </div>
         <!-- Filter buttons -->
@@ -32,34 +33,40 @@
             <button class="filtbtn" data-f="beer">Beer</button>
             <button class="filtbtn" data-f="ciders">Ciders</button>
             <button class="filtbtn" data-f="spirits">Spirits</button>
+            <button class="btn btn-success ms-md-3 px-3 py-2 fw-semibold shadow-sm" id="openAddProductBtn" style="border-radius: 6px; font-size: 0.9rem;">
+                <i class="fas fa-plus-circle me-1"></i> Add New Item
+            </button>
+            <button class="btn btn-primary ms-md-2 px-3 py-2 fw-semibold shadow-sm" id="openRecurringBtn" style="border-radius: 6px; font-size: 0.9rem;">
+                <i class="fas fa-sync-alt me-1"></i> Recurring Order
+            </button>
         </div>
         <div class="row g-4" id="mgrid">
             <!-- CARD 1: Wine -->
             <div class="col-sm-6 col-lg-4 mwrap" data-c="wine" data-aos="fade-up">
                 <div class="mcard"
                      data-img="~/img/menu/wine1.jpg"
-                     data-title="Reserve Cabernet Sauvignon"
+                     data-brand="Reserve Estates"
+                     data-title="Cabernet Sauvignon"
                      data-cat="Wine"
-                     data-price="$24.99" data-old="$32.99"
-                     data-rating="4.9" data-reviews="128"
+                     data-bulkcost="$14.50"
+                     data-price="$24.99"
+                     data-stock="45 cases left"
                      data-cal="13.5% ABV" data-time="750ml"
-                     data-desc="Rich full-bodied red wine with deep notes of blackberry, cassis, and a hint of French oak finish. Perfect paired with artisan cheeses and grilled steak."
+                     data-desc="Rich full-bodied red wine with deep notes of blackberry, cassis, and a hint of French oak finish."
                      data-tags="Red Wine,Reserve,Dry">
                     <div class="mimg">
                         <img src="~/img/menu/wine1.jpg" alt="Cabernet Sauvignon" />
-                        <div class="mbdg hot"><i class="fas fa-star"></i> Featured</div>
-                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                        <div class="mbdg hot"><i class="fas fa-boxes"></i> Bulk Stock</div>
                     </div>
                     <div class="mbody">
-                        <div class="mcat">Wine</div>
-                        <div class="mtit">Reserve Cabernet Sauvignon</div>
-                        <div class="mdesc">Rich red with notes of blackberry, cassis, and French oak finish</div>
+                        <div class="mcat">Wine &bull; Reserve Estates</div>
+                        <div class="mtit">Cabernet Sauvignon</div>
+                        <div class="mdesc"><strong>Bulk Cost:</strong> $14.50 / unit</div>
                         <div class="mfoot">
                             <div>
-                                <div class="mprice">$24.99 <small>$32.99</small></div>
-                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(128)</span></div>
+                                <div class="mprice">Retail: $24.99</div>
                             </div>
-                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                            <button class="madd" title="Modify Item"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
@@ -68,28 +75,28 @@
             <div class="col-sm-6 col-lg-4 mwrap" data-c="beer" data-aos="fade-up" data-aos-delay="80">
                 <div class="mcard"
                      data-img="~/img/menu/beer1.jpg"
-                     data-title="Hazy IPA Craft Brew"
+                     data-brand="Craft Brew Co."
+                     data-title="Hazy IPA"
                      data-cat="Beer"
-                     data-price="$14.99" data-old="$17.99"
-                     data-rating="4.8" data-reviews="95"
+                     data-bulkcost="$8.20"
+                     data-price="$14.99"
+                     data-stock="32 cases left"
                      data-cal="6.8% ABV" data-time="4-pack (330ml)"
-                     data-desc="Juicy, unfiltered India Pale Ale loaded with tropical citrus and stone fruit hop aromas. Smooth mouthfeel with a refreshing citrus kick."
+                     data-desc="Juicy, unfiltered India Pale Ale loaded with tropical citrus and stone fruit hop aromas."
                      data-tags="IPA,Craft,Unfiltered">
                     <div class="mimg">
                         <img src="~/img/menu/beer1.jpg" alt="Hazy IPA" />
-                        <div class="mbdg new"><i class="fas fa-star"></i> Popular</div>
-                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                        <div class="mbdg new"><i class="fas fa-boxes"></i> Bulk Stock</div>
                     </div>
                     <div class="mbody">
-                        <div class="mcat">Beer</div>
-                        <div class="mtit">Hazy IPA Craft Brew</div>
-                        <div class="mdesc">Unfiltered IPA with tropical citrus notes and a smooth finish</div>
+                        <div class="mcat">Beer &bull; Craft Brew Co.</div>
+                        <div class="mtit">Hazy IPA</div>
+                        <div class="mdesc"><strong>Bulk Cost:</strong> $8.20 / unit</div>
                         <div class="mfoot">
                             <div>
-                                <div class="mprice">$14.99 <small>$17.99</small></div>
-                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
+                                <div class="mprice">Retail: $14.99</div>
                             </div>
-                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                            <button class="madd" title="Modify Item"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
@@ -98,28 +105,28 @@
             <div class="col-sm-6 col-lg-4 mwrap" data-c="ciders" data-aos="fade-up" data-aos-delay="160">
                 <div class="mcard"
                      data-img="~/img/menu/cider1.jpg"
+                     data-brand="Orchard House"
                      data-title="Crisp Orchard Apple Cider"
                      data-cat="Ciders"
-                     data-price="$11.99" data-old="$14.99"
-                     data-rating="5.0" data-reviews="210"
+                     data-bulkcost="$6.75"
+                     data-price="$11.99"
+                     data-stock="18 cases left"
                      data-cal="4.5% ABV" data-time="4-pack (500ml)"
-                     data-desc="Crafted from hand-picked fresh pressed heritage apples. Naturally gluten-free, perfectly balanced between sweet and tart."
+                     data-desc="Crafted from hand-picked fresh pressed heritage apples. Naturally gluten-free."
                      data-tags="Gluten-Free,Sweet,Refreshing">
                     <div class="mimg">
                         <img src="~/img/menu/cider1.jpg" alt="Apple Cider" />
-                        <div class="mbdg"><i class="fas fa-star"></i> Best Seller</div>
-                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                        <div class="mbdg"><i class="fas fa-boxes"></i> Bulk Stock</div>
                     </div>
                     <div class="mbody">
-                        <div class="mcat">Ciders</div>
+                        <div class="mcat">Ciders &bull; Orchard House</div>
                         <div class="mtit">Crisp Orchard Apple Cider</div>
-                        <div class="mdesc">Hand-pressed heritage apples, perfectly balanced between sweet and tart</div>
+                        <div class="mdesc"><strong>Bulk Cost:</strong> $6.75 / unit</div>
                         <div class="mfoot">
                             <div>
-                                <div class="mprice">$11.99 <small>$14.99</small></div>
-                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(210)</span></div>
+                                <div class="mprice">Retail: $11.99</div>
                             </div>
-                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                            <button class="madd" title="Modify Item"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
@@ -128,27 +135,28 @@
             <div class="col-sm-6 col-lg-4 mwrap" data-c="spirits" data-aos="fade-up">
                 <div class="mcard"
                      data-img="~/img/menu/spirit1.jpg"
-                     data-title="Small Batch Kentucky Bourbon"
+                     data-brand="Kentucky Heritage"
+                     data-title="Small Batch Bourbon"
                      data-cat="Spirits"
-                     data-price="$49.99" data-old=""
-                     data-rating="4.9" data-reviews="74"
+                     data-bulkcost="$28.00"
+                     data-price="$49.99"
+                     data-stock="14 cases left"
                      data-cal="45.0% ABV" data-time="750ml"
-                     data-desc="Aged in charred white oak barrels yielding rich caramel, vanilla, and toasted nut flavors with a long, warming finish."
+                     data-desc="Aged in charred white oak barrels yielding rich caramel, vanilla, and toasted nut flavors."
                      data-tags="Bourbon,Aged,Smooth">
                     <div class="mimg">
                         <img src="~/img/menu/spirit1.jpg" alt="Bourbon" />
-                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                        <div class="mbdg"><i class="fas fa-boxes"></i> Bulk Stock</div>
                     </div>
                     <div class="mbody">
-                        <div class="mcat">Spirits</div>
-                        <div class="mtit">Small Batch Kentucky Bourbon</div>
-                        <div class="mdesc">Aged in charred oak with notes of caramel, vanilla, and toasted nuts</div>
+                        <div class="mcat">Spirits &bull; Kentucky Heritage</div>
+                        <div class="mtit">Small Batch Bourbon</div>
+                        <div class="mdesc"><strong>Bulk Cost:</strong> $28.00 / unit</div>
                         <div class="mfoot">
                             <div>
-                                <div class="mprice">$49.99</div>
-                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(74)</span></div>
+                                <div class="mprice">Retail: $49.99</div>
                             </div>
-                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                            <button class="madd" title="Modify Item"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
@@ -157,28 +165,28 @@
             <div class="col-sm-6 col-lg-4 mwrap" data-c="wine" data-aos="fade-up" data-aos-delay="80">
                 <div class="mcard"
                      data-img="~/img/menu/wine2.jpg"
-                     data-title="Proscuitto-Friendly Sparkling Prosecco"
+                     data-brand="Villa Bella"
+                     data-title="Sparkling Prosecco DOC"
                      data-cat="Wine"
-                     data-price="$18.99" data-old="$22.99"
-                     data-rating="4.9" data-reviews="56"
+                     data-bulkcost="$10.00"
+                     data-price="$18.99"
+                     data-stock="27 cases left"
                      data-cal="11.0% ABV" data-time="750ml"
-                     data-desc="Vibrant Italian sparkling wine with delicate bubbles, refreshing green apple notes, and a crisp white peach finish."
+                     data-desc="Vibrant Italian sparkling wine with delicate bubbles and refreshing green apple notes."
                      data-tags="Sparkling,Italian,Brut">
                     <div class="mimg">
                         <img src="~/img/menu/wine2.jpg" alt="Prosecco" />
-                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
-                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                        <div class="mbdg new"><i class="fas fa-boxes"></i> Bulk Stock</div>
                     </div>
                     <div class="mbody">
-                        <div class="mcat">Wine</div>
+                        <div class="mcat">Wine &bull; Villa Bella</div>
                         <div class="mtit">Sparkling Prosecco DOC</div>
-                        <div class="mdesc">Delicate bubbles with green apple notes and a crisp white peach finish</div>
+                        <div class="mdesc"><strong>Bulk Cost:</strong> $10.00 / unit</div>
                         <div class="mfoot">
                             <div>
-                                <div class="mprice">$18.99 <small>$22.99</small></div>
-                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(56)</span></div>
+                                <div class="mprice">Retail: $18.99</div>
                             </div>
-                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                            <button class="madd" title="Modify Item"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
@@ -187,40 +195,38 @@
             <div class="col-sm-6 col-lg-4 mwrap" data-c="spirits" data-aos="fade-up" data-aos-delay="160">
                 <div class="mcard"
                      data-img="~/img/menu/spirit2.jpg"
-                     data-title="Botanical London Dry Gin"
+                     data-brand="Botanist Guild"
+                     data-title="London Dry Gin"
                      data-cat="Spirits"
-                     data-price="$36.99" data-old=""
-                     data-rating="4.9" data-reviews="88"
+                     data-bulkcost="$21.50"
+                     data-price="$36.99"
+                     data-stock="20 cases left"
                      data-cal="40.0% ABV" data-time="750ml"
-                     data-desc="Distilled with hand-forged botanicals, juniper berries, fresh cucumber, and citrus peel. Exceptionally crisp and fragrant."
+                     data-desc="Distilled with hand-forged botanicals, juniper berries, fresh cucumber, and citrus peel."
                      data-tags="Gin,Botanical,Cocktail">
                     <div class="mimg">
                         <img src="~/img/menu/spirit2.jpg" alt="Gin" />
-                        <div class="mbdg hot">Staff Pick</div>
-                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                        <div class="mbdg hot"><i class="fas fa-boxes"></i> Bulk Stock</div>
                     </div>
                     <div class="mbody">
-                        <div class="mcat">Spirits</div>
-                        <div class="mtit">Botanical London Dry Gin</div>
-                        <div class="mdesc">Distilled with hand-forged juniper, cucumber, and citrus peel</div>
+                        <div class="mcat">Spirits &bull; Botanist Guild</div>
+                        <div class="mtit">London Dry Gin</div>
+                        <div class="mdesc"><strong>Bulk Cost:</strong> $21.50 / unit</div>
                         <div class="mfoot">
                             <div>
-                                <div class="mprice">$36.99</div>
-                                <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(88)</span></div>
+                                <div class="mprice">Retail: $36.99</div>
                             </div>
-                            <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+                            <button class="madd" title="Modify Item"><i class="fas fa-edit"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- end #mgrid -->
-        <div class="text-center mt-5"><a href="#" class="btn-red"><i class="fas fa-th-large"></i>View Full Catalogue</a></div>
     </div>
 </section>
 
 <!-- ============================================================
-     PRODUCT DETAIL POPUP MODAL
+     INVENTORY ITEM MODIFICATION POPUP MODAL
      ============================================================ -->
 <div id="menuPop">
     <div class="mpbox">
@@ -229,20 +235,178 @@
         <div class="mpbody">
             <div id="mpCat"></div>
             <div id="mpTitle"></div>
-            <div id="mpStars"></div>
             <div id="mpDesc"></div>
             <div id="mpPrice"></div>
+
+            <!-- Amount Left Indicator -->
+            <div id="mpStockLeft" style="font-size:.9rem; color:#f39c12; margin: 8px 0; font-weight:600;"></div>
+
+            <!-- Editable Bulk Price Field -->
+            <div class="mpbulk-edit" style="margin: 12px 0;">
+                <label for="mpBulkPriceInput" style="font-size:.85rem;color:#ccc;display:block;margin-bottom:4px;">Set Bulk Price ($):</label>
+                <input type="text" id="mpBulkPriceInput" placeholder="e.g. $14.50" style="width:100%; padding:8px 12px; background:#222; color:#f39c12; border:1px solid #444; border-radius:4px; font-size:.95rem;" />
+            </div>
+
             <div class="mpmeta" id="mpMeta"></div>
             <div class="mpqty">
+                <label for="mpQnum" style="font-size:.85rem;color:#ccc;margin-right:8px;">Bulk Quantity:</label>
                 <button class="mpqbtn" id="mpMinus">-</button>
-                <span class="mpqnum" id="mpQnum">1</span>
+                <span class="mpqnum" id="mpQnum">12</span>
                 <button class="mpqbtn" id="mpPlus">+</button>
-                <span style="font-size:.82rem;color:#aaa;margin-left:9px;">bottle(s)</span>
+                <span style="font-size:.82rem;color:#aaa;margin-left:9px;">cases / units</span>
             </div>
-            <button class="mpaddcart" id="mpAddCart"><i class="fas fa-shopping-cart"></i>Modify Listing</button>
+            <div class="mptags" id="mpTags"></div>
+            <button class="mpaddcart" id="mpAddCart"><i class="fas fa-edit"></i> Modify Item</button>
         </div>
     </div>
 </div>
+
+<!-- ============================================================
+     RECURRING ORDER POPUP MODAL
+     ============================================================ -->
+<div id="recurringOrderPop" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
+    <div class="mpbox" style="background:#1a1a1a; color:#fff; padding:30px; border-radius:8px; max-width:650px; width:90%; max-height:90vh; overflow-y:auto; position:relative;">
+        <button class="mpclose" id="recurringClose" style="position:absolute; top:15px; right:15px; background:none; border:none; color:#aaa; font-size:1.2rem; cursor:pointer;"><i class="fas fa-times"></i></button>
+        <h3 class="mb-3" style="font-size:1.4rem;color:#fff; border-bottom:1px solid #333; padding-bottom:10px;"><i class="fas fa-calendar-alt text-primary me-2"></i> Schedule Recurring Order</h3>
+
+        <form id="recurringOrderForm" onsubmit="event.preventDefault();">
+            <div class="mb-3">
+                <label class="form-label" style="font-size:0.85rem; color:#ccc;">Select Items & Quantities</label>
+                <!-- Scrollable checklist of inventory items -->
+                <div class="border border-secondary rounded p-3 bg-dark" style="max-height: 220px; overflow-y: auto;">
+
+                    <!-- Item Row 1 -->
+                    <div class="d-flex align-items-center justify-content-between mb-2 pb-2 border-bottom border-secondary">
+                        <div class="form-check">
+                            <input class="form-check-input rec-item-check" type="checkbox" value="Cabernet Sauvignon" id="recItem1">
+                            <label class="form-check-label text-light ms-2" for="recItem1">Cabernet Sauvignon <small class="text-muted">(Wine)</small></label>
+                        </div>
+                        <div class="d-flex align-items-center" style="width: 120px;">
+                            <input type="number" class="form-control form-control-sm bg-dark text-light border-secondary rec-qty" min="1" value="12" placeholder="Qty">
+                            <span class="ms-2 text-muted" style="font-size:0.75rem;">cases</span>
+                        </div>
+                    </div>
+
+                    <!-- Item Row 2 -->
+                    <div class="d-flex align-items-center justify-content-between mb-2 pb-2 border-bottom border-secondary">
+                        <div class="form-check">
+                            <input class="form-check-input rec-item-check" type="checkbox" value="Hazy IPA" id="recItem2">
+                            <label class="form-check-label text-light ms-2" for="recItem2">Hazy IPA <small class="text-muted">(Beer)</small></label>
+                        </div>
+                        <div class="d-flex align-items-center" style="width: 120px;">
+                            <input type="number" class="form-control form-control-sm bg-dark text-light border-secondary rec-qty" min="1" value="12" placeholder="Qty">
+                            <span class="ms-2 text-muted" style="font-size:0.75rem;">cases</span>
+                        </div>
+                    </div>
+
+                    <!-- Item Row 3 -->
+                    <div class="d-flex align-items-center justify-content-between mb-2 pb-2 border-bottom border-secondary">
+                        <div class="form-check">
+                            <input class="form-check-input rec-item-check" type="checkbox" value="Crisp Orchard Apple Cider" id="recItem3">
+                            <label class="form-check-label text-light ms-2" for="recItem3">Crisp Orchard Apple Cider <small class="text-muted">(Ciders)</small></label>
+                        </div>
+                        <div class="d-flex align-items-center" style="width: 120px;">
+                            <input type="number" class="form-control form-control-sm bg-dark text-light border-secondary rec-qty" min="1" value="12" placeholder="Qty">
+                            <span class="ms-2 text-muted" style="font-size:0.75rem;">cases</span>
+                        </div>
+                    </div>
+
+                    <!-- Item Row 4 -->
+                    <div class="d-flex align-items-center justify-content-between mb-2 pb-2 border-bottom border-secondary">
+                        <div class="form-check">
+                            <input class="form-check-input rec-item-check" type="checkbox" value="Small Batch Bourbon" id="recItem4">
+                            <label class="form-check-label text-light ms-2" for="recItem4">Small Batch Bourbon <small class="text-muted">(Spirits)</small></label>
+                        </div>
+                        <div class="d-flex align-items-center" style="width: 120px;">
+                            <input type="number" class="form-control form-control-sm bg-dark text-light border-secondary rec-qty" min="1" value="12" placeholder="Qty">
+                            <span class="ms-2 text-muted" style="font-size:0.75rem;">cases</span>
+                        </div>
+                    </div>
+
+                    <!-- Item Row 5 -->
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="form-check">
+                            <input class="form-check-input rec-item-check" type="checkbox" value="London Dry Gin" id="recItem5">
+                            <label class="form-check-label text-light ms-2" for="recItem5">London Dry Gin <small class="text-muted">(Spirits)</small></label>
+                        </div>
+                        <div class="d-flex align-items-center" style="width: 120px;">
+                            <input type="number" class="form-control form-control-sm bg-dark text-light border-secondary rec-qty" min="1" value="12" placeholder="Qty">
+                            <span class="ms-2 text-muted" style="font-size:0.75rem;">cases</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="recMonthsInput" class="form-label" style="font-size:0.85rem; color:#ccc;">Recurrence Frequency (Every X Months):</label>
+                <input type="number" id="recMonthsInput" class="form-control bg-dark text-light border-secondary" min="1" value="1" placeholder="e.g. 2 months" required />
+            </div>
+
+            <button type="submit" id="acceptRecurringBtn" class="btn btn-primary w-100 py-2 fw-bold"><i class="fas fa-check me-2"></i> Accept Recurring Order</button>
+        </form>
+    </div>
+</div>
+
+<!-- ============================================================
+     ADD NEW PRODUCT POPUP MODAL
+     ============================================================ -->
+<div id="addProductPop" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
+    <div class="mpbox" style="background:#1a1a1a; color:#fff; padding:30px; border-radius:8px; max-width:600px; width:90%; max-height:90vh; overflow-y:auto; position:relative;">
+        <button class="mpclose" id="addProductClose" style="position:absolute; top:15px; right:15px; background:none; border:none; color:#aaa; font-size:1.2rem; cursor:pointer;"><i class="fas fa-times"></i></button>
+        <h3 class="mb-4" style="font-size:1.4rem; border-bottom:1px solid #333; color:#fff; padding-bottom:10px;"><i class="fas fa-plus-circle text-success me-2"></i> Add New Inventory Product</h3>
+
+        <form id="addProductForm" onsubmit="event.preventDefault();">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label" style="font-size:0.85rem; color:#ccc;">Product Name</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" placeholder="e.g. Imperial Stout" required />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" style="font-size:0.85rem; color:#ccc;">Brand / Manufacturer</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" placeholder="e.g. Brewery X" required />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" style="font-size:0.85rem; color:#ccc;">Category</label>
+                    <select class="form-select bg-dark text-light border-secondary">
+                        <option value="wine">Wine</option>
+                        <option value="beer">Beer</option>
+                        <option value="ciders">Ciders</option>
+                        <option value="spirits">Spirits</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" style="font-size:0.85rem; color:#ccc;">Bulk Cost ($)</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" placeholder="e.g. $12.00" required />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" style="font-size:0.85rem; color:#ccc;">Retail Price ($)</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" placeholder="e.g. $21.99" required />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" style="font-size:0.85rem; color:#ccc;">Initial Stock (Cases/Units)</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" placeholder="e.g. 25 cases left" required />
+                </div>
+                <div class="col-12">
+                    <label class="form-label" style="font-size:0.85rem; color:#ccc;">Product Description</label>
+                    <textarea class="form-control bg-dark text-light border-secondary" rows="3" placeholder="Enter product notes, flavor profile, etc..."></textarea>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" style="font-size:0.85rem; color:#ccc;">Image Path / URL</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" placeholder="~/img/menu/product.jpg" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" style="font-size:0.85rem; color:#ccc;">Tags (comma separated)</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" placeholder="e.g. Dark, Heavy, Seasonal" />
+                </div>
+                <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-success w-100 py-2 fw-bold"><i class="fas fa-check me-2"></i> Save New Product</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
 <!-- Back to top -->
 <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
 
@@ -251,7 +415,7 @@
     <script src="~/js/aos.js"></script>
     <script src="~/js/swiper-bundle.min.js"></script>
     <script src="~/js/jquery.magnific-popup.min.js"></script>
-    <script src="~/js/main.js"></script>
+    <script src="~/js/mainProv.js"></script>
     <script>
         // Initialize AOS if needed
         if (typeof AOS !== 'undefined') { AOS.init(); }
