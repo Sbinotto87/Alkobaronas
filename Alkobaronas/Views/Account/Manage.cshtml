@@ -1,0 +1,106 @@
+﻿@{
+    Layout = "_AuthLayout";
+    ViewData["Title"] = "Account Management";
+}
+
+<div class="row w-100 justify-content-center">
+    <div class="col-md-8 col-lg-7">
+        <div class="card p-4 p-md-5 shadow-lg" style="background-color: #1e1e1e; border: 1px solid #333; border-radius: 12px;">
+            
+            <!-- Header -->
+            <div class="text-center mb-4">
+                <h2 style="font-family: 'Playfair Display', serif; font-weight: 700; color: #fff;">Account <span style="color: #ffc107;">Management</span></h2>
+                <p class="text-muted" style="font-size: 0.9rem;">Manage your profile, delivery preferences, and security settings</p>
+            </div>
+
+            <!-- Email & Verification Section -->
+            <div class="p-3 mb-4 rounded" style="background-color: #262626; border: 1px solid #333;">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                    <div>
+                        <span class="text-muted d-block" style="font-size: 0.8rem;">Signed in as</span>
+                        <strong class="text-light">@ViewBag.Email</strong>
+                    </div>
+                    <div>
+                        @if (ViewBag.IsEmailVerified == true)
+                        {
+                            <span class="badge bg-success px-3 py-2"><i class="fas fa-check-circle me-1"></i> Email Verified</span>
+                        }
+                        else
+                        {
+                            <form asp-action="VerifyEmail" method="post" class="d-inline">
+                                <button type="submit" class="btn btn-warning btn-sm" style="font-weight: 600;">
+                                    <i class="fas fa-envelope me-1"></i> Verify Email
+                                </button>
+                            </form>
+                        }
+                    </div>
+                </div>
+                @if (ViewBag.EmailMessage != null)
+                {
+                    <div class="alert alert-success mt-3 mb-0 text-center" style="font-size: 0.85rem;" role="alert">
+                        @ViewBag.EmailMessage
+                    </div>
+                }
+            </div>
+
+            <!-- Delivery Address Form -->
+            <h5 class="text-light mb-3" style="font-family: 'Playfair Display', serif;">Delivery Address</h5>
+            
+            @if (ViewBag.AddressMessage != null)
+            {
+                <div class="alert alert-success text-center" style="font-size: 0.85rem;" role="alert">
+                    @ViewBag.AddressMessage
+                </div>
+            }
+
+            <form asp-action="UpdateAddress" method="post" class="mb-5">
+                <div class="mb-3">
+                    <label for="street" class="form-label text-light">Street Address</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" id="street" name="street" placeholder="e.g. Laisvės al. 15" required autocomplete="street-address" />
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="city" class="form-label text-light">City</label>
+                        <input type="text" class="form-control bg-dark text-light border-secondary" id="city" name="city" placeholder="e.g. Mažeikiai" required autocomplete="address-level2" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="postalCode" class="form-label text-light">Postal Code</label>
+                        <input type="text" class="form-control bg-dark text-light border-secondary" id="postalCode" name="postalCode" placeholder="e.g. LT-89123" required autocomplete="postal-code" />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="country" class="form-label text-light">Country</label>
+                    <input type="text" class="form-control bg-dark text-light border-secondary" id="country" name="country" placeholder="Lithuania" value="Lithuania" required autocomplete="country-name" />
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-warning py-2" style="font-weight: 600; color: #121212;">Save Address Details</button>
+                </div>
+            </form>
+
+            <hr style="border-color: #333;" />
+
+            <!-- Danger Zone: Delete Account -->
+            <div class="mt-4">
+                <h5 class="text-danger mb-2" style="font-size: 1rem; font-weight: 600;">Danger Zone</h5>
+                <p class="text-muted" style="font-size: 0.82rem;">Once you delete your account, there is no going back. Please be certain.</p>
+                
+                <form asp-action="DeleteAccount" method="post" onsubmit="return confirm('Are you sure you want to delete your prototype account?');">
+                    <button type="submit" class="btn btn-outline-danger btn-sm" style="font-weight: 600;">
+                        <i class="fas fa-trash-alt me-1"></i> Delete Account
+                    </button>
+                </form>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="text-center mt-4">
+                <a href="@Url.Action("Index", "Home")" style="font-size: 0.85rem; color: #bbb; text-decoration: none;">
+                    <i class="fas fa-arrow-left me-1"></i> Back to Home
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

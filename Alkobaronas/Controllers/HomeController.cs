@@ -21,5 +21,12 @@ namespace Alkobaronas.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        // Add this Cart action to return Cart.cshtml
+        [HttpGet]
+        public IActionResult Cart()
+        {
+            return View();
+        }
     }
 }
