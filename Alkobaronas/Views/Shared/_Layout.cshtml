@@ -17,10 +17,10 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <div class="blogo">
-                    <div class="bico"><i class="fas fa-utensils"></i></div>
+                    <div class="bico"><img src="img/banner-img.jpg" alt="Burger" /></div>
                     <div>
-                        <div class="bname">Sar<span>ab</span></div>
-                        <div class="bsub">Fast Food & Restaurant</div>
+                        <div class="bname">Alko<span>baronas</span></div>
+                        <div class="bsub">From the street to the bloodstream</div>
                     </div>
                 </div>
             </a>
@@ -30,12 +30,7 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#chefs">Chefs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#reservation">Reservation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-1">
                     <!-- FIX 1: Search button -->
@@ -45,15 +40,35 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <div class=".mfp-container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer>
         <div class="container">
-            &copy; 2026 - Alkobaronas - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="fnm">Alko<span>baronas</span></div>
+                    <p class="fdesc">Drinks from all over the world right at your doorstep.</p>
+                </div>
+                <div class="col-sm-6 col-lg-2" >
+                    <div class="ftit">Quick Links</div>
+                    <ul class="flinks ps-0">
+                        <li><a href="#hero"><i class="fas fa-chevron-right"></i>Home</a></li>
+                        <li><a href="#menu"><i class="fas fa-chevron-right"></i>Our Menu</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="fbot">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                </div>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
