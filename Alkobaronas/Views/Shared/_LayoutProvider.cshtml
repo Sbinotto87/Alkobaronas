@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Alkobaronas</title>
+    <script type="importmap"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400" rel="stylesheet" type="text/css">
+    
+    <!-- Bootstrap 5.3 -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Template Plugin CSS -->
+    <link rel="stylesheet" href="~/css/aos.css" />
+    <link rel="stylesheet" href="~/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="~/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/magnific-popup.css" />
+    <!-- Main Template Style CSS -->
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Alkobaronas.styles.css" asp-append-version="true" />
+    <link rel="icon" type="image/png" href="~/images/favicon.png">
+</head>
+<body>
+    <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+    <nav class="navbar navbar-expand-lg" id="nav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="blogo">
+                    <div class="bico">
+                        <img src="~/img/banner-img.jpg" alt="Burger" />
+                    </div>
+                    <div>
+                        <div class="bname">Alko<span>baronas</span></div>
+                        <div class="bsub">From the street to the bloodstream</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <div class=".mfp-container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="fnm">Alko<span>baronas</span></div>
+                    <p class="fdesc">Drinks from all over the world right at your doorstep.</p>
+                </div>
+                <div class="col-sm-6 col-lg-2" >
+                    <div class="ftit">Quick Links</div>
+                    <ul class="flinks ps-0">
+                        <li><a href="#hero"><i class="fas fa-chevron-right"></i>Home</a></li>
+                        <li><a href="#menu"><i class="fas fa-chevron-right"></i>Our Menu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fbot">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
